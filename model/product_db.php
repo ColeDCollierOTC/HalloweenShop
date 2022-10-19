@@ -2,7 +2,7 @@
 
 <?php
 
-$dsn = "mysql:host=localhost;dbname=games_store";
+$dsn = "mysql:host=localhost;dbname=halloweenstore";
 $username = "root";
 $password = "";
 try {
@@ -13,16 +13,16 @@ try {
     
 }
 
-function getOrders()
+function getMovies()
 {
 
-    $myQuery = "Select * from games";
+    $myQuery = "Select * from themovies";
     global $db;
     $qry = $db->query($myQuery);       
-    $games = $qry->fetchAll();
+    $theMovies = $qry->fetchAll();
 
 
-    return $movies;
+    return $theMovies;
 }
 
 function getOrder($theOrderName)
@@ -52,6 +52,20 @@ function saveOrder($aryProduct)
 
 }
 
+function displayTheMovies()
+{
+    $theMovies = getMovies();
+     //for each array inside of the associative array display the info 
+     foreach($theMovies as $aMovie){
+        echo("<div class='aMovie'>");
+        echo("<h3>" . $aMovie[1] ."</h3>");
+        echo("<h3> Synopsis:" . $aMovie[3] ."</h3>");
+        echo("<h3> Price:$" . $aMovie[2] ."</h3>");
+        echo("<img src='" .$aMovie[4]."'>");
+        echo("</div>");
+    }
+
+}
 
 
 ?>
