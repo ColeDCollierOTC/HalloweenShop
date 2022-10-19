@@ -11,8 +11,8 @@
             <div class="mb-3">
                 <input type="hidden" name="action" value="add">
 
-                <label>Name:</label>
-                <select name="productkey">
+                <label class="form-label">Name:</label>
+                <select name="productkey" class="form-select">
                 <?php foreach($products as $key => $product) :
                     $cost = number_format($product['cost'], 2);
                     $name = $product['name'];
@@ -25,8 +25,8 @@
                 </select><br>
             </div>
             <div class="mb-3">
-            <label>Quantity:</label>
-            <select name="itemqty">
+            <label class="form-label">Quantity:</label>
+            <select name="itemqty" class="form-select">
             <?php for($i = 1; $i <= 10; $i++) : ?>
                 <option value="<?php echo $i; ?>">
                     <?php echo $i; ?>
