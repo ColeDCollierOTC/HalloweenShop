@@ -16,6 +16,9 @@
 <body>
   <header>
     <!-- place navbar here -->
+    <?php
+        include "navigation.php";
+    ?>
   </header>
   <main>
 
