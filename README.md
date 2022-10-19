@@ -1,1 +1,1 @@
-# HalloweenShop
+# Ghostly Galore Halloween Store
