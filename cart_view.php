@@ -1,9 +1,9 @@
 
 
-<div class="card" style="width: 30rem;">
+<div class="card" style="width: 55rem;">
     <div class="card-body">
         <h5 class="card-title">Movie Store</h5>
-        <div class="card" style="width: 25rem;">
+        <div class="card" style="width: 50rem;">
             <div class="card-body">
                 <h5>Your Cart</h5>
                 <?php if (empty($_SESSION['cartHalloween']) || 
@@ -12,48 +12,59 @@
                 <?php else: ?>
                     <form action="." method="post">
                     <input type="hidden" name="action" value="update">
-                    <table>
-                        <tr id="cart_header">
-                            <th class="left">Item</th>
-                            <th class="right">Item Cost</th>
-                            <th class="right">Quantity</th>
-                            <th class="right">Item Total</th>
+                    <table class="container text-center">
+                        <tr class="row">
+                            <th class="form-text col" >Item</th>
+                            <th class="form-text col">Item Cost</th>
+                            <th class="form-text col">Quantity</th>
+                            <th class="form-text col">Item Total</th>
                         </tr>
 
                     <?php foreach( $_SESSION['cartHalloween'] as $key => $item ) :
                         $cost  = number_format($item['cost'],  2);
                         $total = number_format($item['total'], 2);
                     ?>
-                    <tr>
-                        <td>
+                    <tr  class="row">
+                        <td class="col">
                             <?php echo $item['name']; ?>
                         </td>
-                        <td class="right">
+                        <td class="col">
                             $<?php echo $cost; ?>
                         </td>
-                        <td class="right">
-                            <input type="text" class="cart_qty"
+                        <td class="col">
+                            <input type="text" class="form-control"
                                 name="newqty[<?php echo $key; ?>]"
                                 value="<?php echo $item['qty']; ?>">
                         </td>
-                        <td class="right">
+                        <td class="col">
                             $<?php echo $total; ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>
-                    <tr id="cart_footer">
-                        <td colspan="3"><b>Subtotal</b></td>
-                        <td>$<?php echo get_subtotal(); ?></td>
+                    <tr class="row"">
+                        
+                        <td class="col"><b>Subtotal</b></td>
+                        <td class="col">$<?php echo get_subtotal(); ?></td>
+                        <td class="col"><b></b></td>
+                        <td class="col"><b></b></td>
                     </tr>
-                    <tr>
-                        <td colspan="4" class="right">
+                    <tr class="row">
+                        <td class="col">
                             <input type="submit" value="Update Cart" class="btn btn-primary">
                         </td>
+                        <td class="col"><b></b></td>
+                        <td class="col"><b></b></td>
+                        <td class="col"><b></b></td>
                     </tr>
+                    <tr class="row">
+                        <td class="col">
+                            <p>Click "Update Cart" to update quantities in your
+                            cart. Enter a quantity of 0 to remove an item.
+                            </p>
+                        </td>
+                    </td>
                     </table>
-                    <p>Click "Update Cart" to update quantities in your
-                        cart. Enter a quantity of 0 to remove an item.
-                    </p>
+                    
                     </form>
                     <?php endif; ?>
             </div>

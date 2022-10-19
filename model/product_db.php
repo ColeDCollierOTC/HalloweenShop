@@ -62,6 +62,10 @@ function displayTheMovies()
         echo("<h3> Synopsis:" . $aMovie[3] ."</h3>");
         echo("<h3> Price:$" . $aMovie[2] ."</h3>");
         echo("<img src='$aMovie[4]'>");
+<<<<<<< HEAD
+=======
+        echo("<h3> img link:$" . $aMovie[4] ."</h3>");
+>>>>>>> 6250167ec25f4e33c828bd8a2f895fe8d3caa238
         echo("</div>");
     }
 
