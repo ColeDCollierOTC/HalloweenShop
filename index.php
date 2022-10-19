@@ -29,14 +29,19 @@ $products['movie-3'] = array('name' => 'movie3', 'cost' => '30.00');
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+  
 </head>
 
 <body>
   <header>
-    <!-- place navbar here -->
+    
     <?php
+      //including functions
+      include("./model/product_db.php");
+      //including the navbar view 
         include "./view/navigation.php";
+        //displaying avaiable movies to the user 
+        include("./view/displayMovies.php");
 
     ?>
   </header>
