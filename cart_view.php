@@ -65,6 +65,13 @@
                             </p>
                         </td>
                     </td>
+                    <tr class="row"">
+                    
+                        <td class="col"><b>Total</b></td>
+                        <td class="col">$<?php echo (get_subtotal()+ (get_subtotal()*0.04225)); ?></td>
+                        <td class="col"><b>with Tax</b></td>
+                        <td class="col"><b></b></td>
+                    </tr>
                     </table>
                     
                     </form>

@@ -12,7 +12,7 @@ try {
     die(include "404.php");
     
 }
-
+// grabs the movies from the database and return them
 function getMovies()
 {
 
