@@ -12,7 +12,7 @@ try {
     die(include "404.php");
     
 }
-
+// grabs the movies from the database and return them
 function getMovies()
 {
 
@@ -25,19 +25,20 @@ function getMovies()
 
     return $theMovies;
 }
-
+//used to get a specsifict movie
 function getOrder($theOrderName)
 {
 
-    $games = getOrders();    
-    foreach ($games as $game)
+    $movies = getOrders();    
+    foreach ($movies as $movie)
     {      
-        if ($game[0] == $theOrderName){
-            return $product;
+        if ($movie[0] == $theOrderName){
+            return $movie;
         }
 
     }
 }
+//used to save into the database if need but did not do for assignment
 
 function saveOrder($aryProduct)
 {
