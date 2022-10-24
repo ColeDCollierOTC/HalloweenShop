@@ -10,7 +10,6 @@
         <form action="." method="post">
             <div class="mb-3">
                 <input type="hidden" name="action" value="add">
-
                 <label class="form-label">Name:</label>
                 <select name="productkey" class="form-select">
                 <?php foreach($products as $key => $product) :

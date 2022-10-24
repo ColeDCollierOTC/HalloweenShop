@@ -1,9 +1,10 @@
 <!-- 
-  Halloween Shop 
-  10/19/2022
+  Project Name:Halloween Shop 
+  Date Started: 10/19/2022
 
-  Cole Collier
-  Lucas Stephen
+  Contributers:
+    Cole Collier
+    Lucas Stephens
 
 
 
