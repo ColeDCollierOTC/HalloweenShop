@@ -12,10 +12,10 @@ function add_item($key, $quantity) {
     }
 
     // Add item
-    $cost = $products[$key]['cost'];
+    $cost = $products[$key]['moviePrice'];
     $total = $cost * $quantity;
     $item = array(
-        'name' => $products[$key]['name'],
+        'name' => $products[$key]['movieTitle'],
         'cost' => $cost,
         'qty'  => $quantity,
         'total' => $total

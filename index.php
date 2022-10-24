@@ -1,5 +1,5 @@
 <?php
-include "./model/product_db.php";
+include("./model/product_db.php");
 // Start session management with a persistent cookie
 $lifetime = 60 * 60 * 24 * 14;    // 2 weeks in seconds
 session_set_cookie_params($lifetime, '/');
@@ -9,11 +9,13 @@ session_start();
 if (empty($_SESSION['cartHalloween'])) { $_SESSION['cartHalloween'] = array(); }
 
 
+
 // Create a table of products
 $products = array();
-$products['movie-1'] = array('name' => 'movie1', 'cost' => '60.00');
-$products['movie-2'] = array('name' => 'movie2', 'cost' => '59.99');
-$products['movie-3'] = array('name' => 'movie3', 'cost' => '30.00');
+$products = getMovies();
+// $products['movie-1'] = array('name' => 'movie1', 'cost' => '60.00');
+// $products['movie-2'] = array('name' => 'movie2', 'cost' => '59.99');
+// $products['movie-3'] = array('name' => 'movie3', 'cost' => '30.00');
 
 ?>
 
@@ -39,7 +41,7 @@ $products['movie-3'] = array('name' => 'movie3', 'cost' => '30.00');
     
     <?php
       //including functions
-      include("./model/product_db.php");
+      
       //including the navbar view 
         include "./view/navigation.php";
         //displaying avaiable movies to the user 

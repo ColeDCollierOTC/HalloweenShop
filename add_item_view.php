@@ -14,8 +14,8 @@
                 <label class="form-label">Name:</label>
                 <select name="productkey" class="form-select">
                 <?php foreach($products as $key => $product) :
-                    $cost = number_format($product['cost'], 2);
-                    $name = $product['name'];
+                    $cost = number_format($product['moviePrice'], 2);
+                    $name = $product['movieTitle'];
                     $item = $name . ' ($' . $cost . ')';
                 ?>
                     <option value="<?php echo $key; ?>">
