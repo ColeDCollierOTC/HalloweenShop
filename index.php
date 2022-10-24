@@ -71,7 +71,7 @@ $products = getMovies();
   <header>
     <div class="pageBanner">
 
-    <h1>Spooktober Movies</h1>
+    <h1>Ghostly Galore Movies</h1>
     
     <div class="bannerImages">
 
