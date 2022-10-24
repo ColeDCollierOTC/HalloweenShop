@@ -16,7 +16,8 @@ try {
 function getMovies()
 {
 
-    $myQuery = "Select * from themovies";
+    $myQuery = "Select * from themovies
+    ORDER BY movietitle ASC";
     global $db;
     $qry = $db->query($myQuery);       
     $theMovies = $qry->fetchAll();
@@ -57,16 +58,15 @@ function displayTheMovies()
     $theMovies = getMovies();
      //for each array inside of the associative array display the info 
      foreach($theMovies as $aMovie){
-        echo("<div class='aMovie'>");
-        echo("<h3>" . $aMovie[1] ."</h3>");
-        echo("<h3> Synopsis:" . $aMovie[3] ."</h3>");
-        echo("<h3> Price:$" . $aMovie[2] ."</h3>");
-        echo("<img src='$aMovie[4]'>");
-<<<<<<< HEAD
-=======
-        echo("<h3> img link:$" . $aMovie[4] ."</h3>");
->>>>>>> 6250167ec25f4e33c828bd8a2f895fe8d3caa238
-        echo("</div>");
+        echo("<div class='card' style='width: 18rem;'>
+        <img src='$aMovie[4]' class='card-img-top' alt='...'>
+        <div class='card-body'>
+          <h5 class='card-title'>Movie: $aMovie[1]</h5>
+          <h6 class='card-subtitle mb-2 text-muted'>Price:$aMovie[2]$</h6>
+          <p class='card-text'>Synopsis $aMovie[3]</p>
+          
+        </div>
+      </div>");
     }
 
 }
