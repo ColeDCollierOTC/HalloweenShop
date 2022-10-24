@@ -16,8 +16,7 @@ try {
 function getMovies()
 {
 
-    $myQuery = "Select * from themovies
-    ORDER BY movietitle ASC";
+    $myQuery = "SELECT * FROM themovies";
     global $db;
     $qry = $db->query($myQuery);       
     $theMovies = $qry->fetchAll();
