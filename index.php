@@ -31,7 +31,9 @@ if (empty($_SESSION['cartHalloween'])) { $_SESSION['cartHalloween'] = array(); }
 
 // Create a table of products
 $products = array();
+// grabs and fill array with movie from database
 $products = getMovies();
+//test code for cart
 // $products['movie-1'] = array('name' => 'movie1', 'cost' => '60.00');
 // $products['movie-2'] = array('name' => 'movie2', 'cost' => '59.99');
 // $products['movie-3'] = array('name' => 'movie3', 'cost' => '30.00');
