@@ -1,4 +1,5 @@
 <?php
+include "./model/product_db.php";
 // Start session management with a persistent cookie
 $lifetime = 60 * 60 * 24 * 14;    // 2 weeks in seconds
 session_set_cookie_params($lifetime, '/');
@@ -6,6 +7,7 @@ session_start();
 
 // Create a cart array if needed
 if (empty($_SESSION['cartHalloween'])) { $_SESSION['cartHalloween'] = array(); }
+
 
 // Create a table of products
 $products = array();
