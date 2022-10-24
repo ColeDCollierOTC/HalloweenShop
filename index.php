@@ -17,6 +17,7 @@
 
 
 <?php
+  //including functions
 include("./model/product_db.php");
 // Start session management with a persistent cookie
 $lifetime = 60 * 60 * 24 * 14;    // 2 weeks in seconds
@@ -51,14 +52,37 @@ $products = getMovies();
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- link to the styles sheet -->
+    <link rel="stylesheet" href="./assets/styles.css">
+    <!-- link to the google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Nosifer&display=swap" rel="stylesheet">
   
 </head>
 
 <body>
   <header>
+    <div class="pageBanner">
+
+    <h1>Spooktober Movies</h1>
+    
+    <div class="bannerImages">
+
+    <img src="./assets/images/happyhalloween.gif" alt="">
+    <img src="./assets/images/ghost.gif" alt="" srcset="">
+
+    </div>
+  
+    <h1>Your ONE Stop Shop for All Movies Halloween!!!</h1>
+
+    </div>
     
     <?php
-      //including functions
+    
       
       //including the navbar view 
         include "./view/navigation.php";

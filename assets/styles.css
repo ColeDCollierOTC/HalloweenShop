@@ -1,0 +1,74 @@
+*{
+    margin: 8px;
+    padding:2px;
+}
+.pageBanner{
+    background-color: black;
+    text-align: center;
+    border:5px;
+    border-color: black;
+    border-style:ridge;
+
+}
+.pageBanner h1{
+    animation: blinking 2s infinite;
+    font-family: 'Nosifer', cursive;
+    color:red;
+}
+.bannerImages{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.bannerImages img{
+    height:600px;
+    width:600px;
+    border-radius: 8px;
+}
+.displayMovies{
+    background-color: black;
+  
+
+}
+.displayMovieHeaders{
+    text-align: center;
+    font-family: 'Butcherman', cursive;
+font-family: 'Nosifer', cursive;
+color:red;
+
+}
+.aMovie{
+    border:5px;
+    border-color: red;
+    border-style:groove;
+    background-image:url("./images/blood2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke:1px black;
+    font-size: 20px;
+}
+.movieDisplay{
+ display:grid;
+ grid-template-columns: repeat(4,1fr);
+ gap: 10px;
+}
+@keyframes blinking{
+    0%{   color: red;   }
+    50%{   color: transparent; }
+    100%{   color: red; }
+      }
+    main{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url("./images/splatter2.gif");
+        background-size: cover;
+       background-repeat: no-repeat;
+    }

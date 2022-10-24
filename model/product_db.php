@@ -56,18 +56,23 @@ function saveOrder($aryProduct)
 function displayTheMovies()
 {
     $theMovies = getMovies();
+    echo("<div class='movieDisplay'>");
      //for each array inside of the associative array display the info 
      foreach($theMovies as $aMovie){
-        echo("<div class='card' style='width: 18rem;'>
+       
+        echo("<div class='card aMovie' style='width: 30rem;'>
         <img src='$aMovie[4]' class='card-img-top' alt='...'>
         <div class='card-body'>
-          <h5 class='card-title'>Movie: $aMovie[1]</h5>
-          <h6 class='card-subtitle mb-2 text-muted'>Price:$aMovie[2]$</h6>
+          <h1 class='card-title'>Movie: $aMovie[1]</h1>
+          <h3 class='card-subtitle mb-2 text-muted'>Price:$aMovie[2]$</h3>
           <p class='card-text'>Synopsis $aMovie[3]</p>
           
         </div>
       </div>");
+
+     
     }
+    echo("</div>");
 
 }
 
