@@ -16,7 +16,8 @@ try {
 function getMovies()
 {
 
-    $myQuery = "SELECT * FROM themovies";
+    // Selecting from our database and Ordering by movietitle, I got this the myphpadmit page to order and copyed the sql
+    $myQuery = "SELECT * FROM `themovies` ORDER BY `themovies`.`movieTitle` ASC";
     global $db;
     $qry = $db->query($myQuery);       
     $theMovies = $qry->fetchAll();

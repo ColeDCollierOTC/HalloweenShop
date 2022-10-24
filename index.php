@@ -1,3 +1,21 @@
+<!-- 
+  Halloween Shop 
+  10/19/2022
+
+  Cole Collier
+  Lucas Stephen
+
+
+
+
+-->
+
+
+
+
+
+
+
 <?php
 include("./model/product_db.php");
 // Start session management with a persistent cookie
