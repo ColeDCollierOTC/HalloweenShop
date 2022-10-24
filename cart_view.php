@@ -6,10 +6,12 @@
         <div class="card" style="width: 50rem;">
             <div class="card-body">
                 <h5>Your Cart</h5>
+                <!-- Checks for a session cart is empty -->
                 <?php if (empty($_SESSION['cartHalloween']) || 
                     count($_SESSION['cartHalloween']) == 0) : ?>
                     <p>There are no items in your cart.</p>
                 <?php else: ?>
+                    <!-- used bootstrap container to keep the organization of the cart -->
                     <form action="." method="post">
                     <input type="hidden" name="action" value="update">
                     <table class="container text-center">
