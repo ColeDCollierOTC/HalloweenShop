@@ -56,6 +56,7 @@ color:red;
  display:grid;
  grid-template-columns: repeat(4,1fr);
  gap: 10px;
+ /* Could add responsive design for smaller view ports putting fewer items in a column */
 }
 @keyframes blinking{
     0%{   color: red;   }
