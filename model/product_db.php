@@ -68,8 +68,8 @@ function displayTheMovies()
 
         <div class='card-body' id='movieInfo'>
           <h1 class='card-title'>Movie: $aMovie[1]</h1>
-          <h3 class='card-subtitle mb-2 text-muted'>Price:$aMovie[2]$</h3>
-          <p class='card-text'>Synopsis $aMovie[3]</p>
+          <h3 class='card-subtitle mb-2 '>Price:$aMovie[2]$</h3>
+          <p class='card-text'>Synopsis: $aMovie[3]</p>
           
         </div>
       </div>");
