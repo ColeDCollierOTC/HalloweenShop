@@ -25,6 +25,18 @@ function getMovies()
 
     return $theMovies;
 }
+
+//used to get single movie by its id
+// returns an array of that product
+function getProduct($id) 
+{
+    global $db;
+    $sql = "select * from themovies where movieID = $id";
+   
+    $qry = $db->query($sql);
+    $rs = $qry->fetch();
+    return $rs;
+}
 //used to get a specsifict movie
 function getOrder($theOrderName)
 {

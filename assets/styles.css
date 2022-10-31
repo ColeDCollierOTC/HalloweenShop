@@ -65,9 +65,6 @@ color:red;
       }
     main{
         background-color: black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         text-align: center;
         background-image: url("./images/splatter2.gif");
         background-size: cover;
