@@ -6,6 +6,7 @@
         <div class="card" style="width: 50rem;">
             <div class="card-body">
                 <h5>Your Cart</h5>
+                print_r
                 <!-- Checks for a session cart is empty -->
                 <?php if (empty($_SESSION['cartHalloween']) || 
                     count($_SESSION['cartHalloween']) == 0) : ?>
@@ -16,7 +17,7 @@
                     <input type="hidden" name="action" value="update">
                     <table class="container text-center">
                         <tr class="row">
-                            <th class="form-text col" >Item</th>
+                            <th class="form-text col">Item</th>
                             <th class="form-text col">Item Cost</th>
                             <th class="form-text col">Quantity</th>
                             <th class="form-text col">Item Total</th>
